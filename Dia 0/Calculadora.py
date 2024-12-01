@@ -1,11 +1,12 @@
+#lybrarys
 import os
-#Seccion para definiar las variables
-
+#definition of variables
 opcion = True
 operacion = 0
 numero1, numero2 = 0,0
 continuar = 'S'
 
+#function to calculate the operation
 def calculo(operacion, numero1, numero2):
         match operacion:
             case 1:
@@ -22,11 +23,11 @@ def calculo(operacion, numero1, numero2):
             case _:
                     return print("Ni idea como llegaste aqui, pero XD")     
                     
-#Metodo para limpiar la consola
+#function to clean the console after each operation
 def limpiarConsola():
     os.system("cls")
 
-#Seccion de las operaciones
+#while opcion is true, the calculator will continue running
 while(opcion == True):
     print("Calculadora \n")
     print("1-Suma")
@@ -38,14 +39,13 @@ while(opcion == True):
     numero2 = int(input("Ingrese el segundo numero: "))
     print(calculo(operacion, numero1, numero2))
     
-  
+  #Ask if the user wantas continue
     continuar = input(("Desea continuar? [S/N]")).capitalize()
     
-    print(continuar)
-    if(continuar == 'S'):
+    if(continuar == 'S'): #if the user wants to continue
         opcion = True
         limpiarConsola()
-    elif continuar == 'N':
+    elif continuar == 'N': #if the user wants to finish
         opcion = False
     elif continuar != 'S' and continuar != 'N':
         print("Opcion no valida")
