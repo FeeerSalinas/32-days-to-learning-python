@@ -1,1 +1,1 @@
-32 días de proyectos para aprender python
+32 days and 32 projects to learning python.
